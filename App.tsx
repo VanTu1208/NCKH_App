@@ -369,7 +369,7 @@ useEffect(() => {
     }
     else {
       Alert.alert(
-      'Confirm',
+      'Xác nhận',
       'Bạn có chắc chắn muốn hủy?',
       [
         {
@@ -394,16 +394,16 @@ useEffect(() => {
     setSelectedItem(type);
     switch (type) {
       case 'light':
-        newSelectedData = `Light Value: ${lightValue}`;
+        newSelectedData = `Ánh sáng: ${lightValue} Lux`;
         break;
       case 'temperature':
-        newSelectedData = `Temperature Value: ${tempValue}°C`;
+        newSelectedData = `Nhiệt độ: ${tempValue}°C`;
         break;
       case 'humidity':
-        newSelectedData = `Humidity Value: ${humValue}%`;
+        newSelectedData = `Độ ẩm: ${humValue}%`;
         break;
       case 'power':
-        newSelectedData = `Power Value: ${powerValue}W\nCurrent Value: ${currValue}A`;
+        newSelectedData = `Công suất: ${powerValue}W\nDòng điện: ${currValue}A`;
         break;
     }
   
@@ -453,7 +453,7 @@ useEffect(() => {
   //Nhan giu de mo ra tuy chon
   const openOptionsRoom = (room: Room) => {
     Alert.alert(
-      'Options', // Tiêu đề
+      'Tùy chọn', // Tiêu đề
       `Bạn muốn làm gì với phòng ${room.name}?`, // Nội dung
       [
         { text: 'Chỉnh sửa', onPress: () => startEditingRoom(room) }, 
@@ -468,7 +468,7 @@ useEffect(() => {
   // Hàm xóa phòng
   const deleteRoom = (room: Room) => {
     Alert.alert(
-      'Confirm',
+      'Xác nhận',
       `Xóa phòng ${room.name}?`,
       [
         {
@@ -519,7 +519,7 @@ useEffect(() => {
 
   const cancelEdit = () => {
     Alert.alert(
-      'Confirm',
+      'Xác nhận',
       'Xác nhận hủy chỉnh sửa?',
       [
         {
@@ -932,7 +932,7 @@ useEffect(() => {
                     height: 40,
                     borderColor: '#008375', borderWidth: 2, borderRadius: 5, marginTop: 20, paddingLeft: 10, fontSize: 16, color: 'black',
                   }}
-                  placeholder="Room's Name"
+                  placeholder="Tên phòng"
                   placeholderTextColor="#999"
                   value={name}
                   onChangeText={(text) => setName(text)} // Hàm này sẽ cập nhật giá trị của tên phòng
@@ -943,14 +943,14 @@ useEffect(() => {
                   style={{
                     height: 40, borderColor: '#008375', borderWidth: 2, borderRadius: 5, marginTop: 20, paddingLeft: 10, fontSize: 16, color: 'black',
                   }}
-                  placeholder="Room's IP"
+                  placeholder="IP phòng"
                   placeholderTextColor="#999"
                   value={ip}
                   onChangeText={(text) => setIP(text)} // Hàm này sẽ cập nhật giá trị của tên phòng
                 />
                 <View style={{ display: 'flex', flexDirection: 'row', marginTop: 70,width: 300,}}>
                   <TouchableOpacity style={[addRoomStyles.box, addRoomStyles.AddBtn]} onPress={handleAddRoom}>
-                    <Text style={{ color: '#008375', fontWeight:'bold', fontSize: 19}}>OK</Text>
+                    <Text style={{ color: '#008375', fontWeight:'bold', fontSize: 19}}>Đồng ý</Text>
                   </TouchableOpacity>
                   
                   <TouchableOpacity style={[addRoomStyles.box, addRoomStyles.ExitBtn]} onPress={CancelAddRoom}>
